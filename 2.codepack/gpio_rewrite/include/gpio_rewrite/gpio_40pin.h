@@ -19,6 +19,50 @@
 #define MAX_BUF	64
 #define RET_OK 0
 
+#define GPIO_1 NULL
+#define GPIO_2 NULL
+#define GPIO_3 9
+#define GPIO_4 NULL
+#define GPIO_5 8
+#define GPIO_6 NULL
+#define GPIO_7 101
+#define GPIO_8 111
+#define GPIO_9 NULL
+#define GPIO_10 112
+
+#define GPIO_11 6
+#define GPIO_12 18
+#define GPIO_13 27
+#define GPIO_14 NULL
+#define GPIO_15 30
+#define GPIO_16 27
+#define GPIO_17 NULL
+#define GPIO_18 7
+#define GPIO_19 12
+#define GPIO_20 NULL
+
+#define GPIO_21 13
+#define GPIO_22 29
+#define GPIO_23 14
+#define GPIO_24 15
+#define GPIO_25 NULL
+#define GPIO_26 28
+#define GPIO_27 106
+#define GPIO_28 107
+#define GPIO_29 119
+#define GPIO_30 NULL
+
+#define GPIO_31 118
+#define GPIO_32 25
+#define GPIO_33 4
+#define GPIO_34 NULL
+#define GPIO_35 103
+#define GPIO_36 3
+#define GPIO_37 105
+#define GPIO_38 104
+#define GPIO_39 NULL
+#define GPIO_40 108
+
 class gpio_40pin
 {
     public:

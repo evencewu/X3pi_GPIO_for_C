@@ -25,6 +25,9 @@ include_directories(
 )
 
 
+add_executable(LED src/LED.cpp)
+ament_target_dependencies(LED rclcpp)
+
 add_executable(test_ src/test_.cpp include/${PROJECT_NAME}/gpio_40pin.cpp)
 ament_target_dependencies(test_ rclcpp)
 
@@ -36,6 +39,7 @@ install(DIRECTORY include/
 )
 
 install(TARGETS
+  LED
   test_
   time_test
   DESTINATION lib/${PROJECT_NAME})

@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 	
 	gpio_40pin GPIO37;
 
-	GPIO37.gpio_init(105);
+	GPIO37.gpio_init(GPIO_37);
 	GPIO37.gpio_export();
 	GPIO37.gpio_set_dir(1);
 	if (strcmp(argv[1], "high") == 0)
