@@ -68,7 +68,7 @@ void gpio_40pin::pwm_back()
 	{
 		gpio_set_value(0);
 		state = 1;
-		timer_.expires_at(timer_.expires_at() + boost::posix_time::microseconds(high_time));
+		timer_.expires_at(timer_.expires_at() + boost::posix_time::microseconds(low_time));
 
 		
 	}
@@ -76,7 +76,7 @@ void gpio_40pin::pwm_back()
 	{
 		gpio_set_value(1);
 		state = 0;
-		timer_.expires_at(timer_.expires_at() + boost::posix_time::microseconds(low_time));
+		timer_.expires_at(timer_.expires_at() + boost::posix_time::microseconds(high_time));
 		
 		
 	}
