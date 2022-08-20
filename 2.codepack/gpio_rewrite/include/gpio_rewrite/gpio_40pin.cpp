@@ -64,21 +64,18 @@ void gpio_40pin::gpio_set_value(int value)
 
 void gpio_40pin::pwm_back()
 {
+	timer_.expires_at(timer_.expires_at() + boost::posix_time::microseconds(100));
 	if (state == 0)
 	{
+		//timer_.expires_at(timer_.expires_at() + boost::posix_time::microseconds(low_time));
 		gpio_set_value(0);
 		state = 1;
-		timer_.expires_at(timer_.expires_at() + boost::posix_time::microseconds(low_time));
-
-		
 	}
 	else
 	{
+		//timer_.expires_at(timer_.expires_at() + boost::posix_time::microseconds(high_time));
 		gpio_set_value(1);
 		state = 0;
-		timer_.expires_at(timer_.expires_at() + boost::posix_time::microseconds(high_time));
-		
-		
 	}
 	timer_.async_wait(boost::bind(&gpio_40pin::pwm_back, this));
 }
